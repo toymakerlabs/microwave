@@ -1,0 +1,34 @@
+@import "styles/variables.scss";
+
+.timer-indicator {
+  position: absolute;
+  top: 1.65rem;
+  right: 0.25rem;
+  z-index: 9;
+
+  svg {
+    max-height: 1rem;
+    max-width: 1rem;
+    transform: scaleX(-1);
+
+    .circle {
+      stroke: $ui-light;
+      fill: none;
+      stroke-width: 4;
+      stroke-linecap: square;
+      animation: progress 1s ease-out forwards;
+      opacity: 0;
+
+      &.enabled {
+        stroke: $ui-dark;
+        opacity: 1;
+      }
+    }
+
+    .circle {
+      &.running {
+        stroke: $accent-color;
+      }
+    }
+  }
+}

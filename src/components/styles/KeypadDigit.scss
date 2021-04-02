@@ -1,0 +1,12 @@
+@import "styles/variables";
+@import "styles/mixins";
+@import "components/styles/SuperButton.scss";
+
+.keypad-digit {
+  font-family: $default-font;
+
+  button {
+    width: 100%;
+    height: 100%;
+  }
+}

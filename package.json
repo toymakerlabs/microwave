@@ -1,0 +1,71 @@
+{
+  "name": "microwave",
+  "version": "1.0.0",
+  "description": "By John Faithorn",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.prod.config.js",
+    "test": "jest",
+    "lint": "eslint ./src --ext .ts,.tsx",
+    "start": "webpack serve --config webpack.dev.config.js --progress --profile --content-base src/"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/tests"
+    ],
+    "setupFilesAfterEnv": [
+      "jest-extended"
+    ],
+    "globals": {
+      "ts-jest": {
+        "tsconfig": "tsconfig.json"
+      }
+    },
+    "testMatch": [
+      "**/tests/**/*.+(ts|tsx|js)",
+      "**/?(*.)+(spec|test).+(ts|tsx|js)"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    }
+  },
+  "author": "John Faithorn",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.12",
+    "@babel/preset-react": "^7.12.13",
+    "@babel/preset-typescript": "^7.13.0",
+    "@types/jest": "^26.0.22",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "@types/webpack": "^5.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.20.0",
+    "@typescript-eslint/parser": "^4.20.0",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.0",
+    "eslint": "^7.23.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.23.1",
+    "html-webpack-plugin": "^5.3.1",
+    "jest": "^26.6.3",
+    "jest-extended": "^0.11.5",
+    "mini-css-extract-plugin": "^1.4.0",
+    "sass": "^1.32.8",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
+    "ts-jest": "^26.5.4",
+    "ts-loader": "^8.0.18",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3",
+    "webpack": "^5.28.0",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "strongly-typed-events": "^2.1.5"
+  }
+}

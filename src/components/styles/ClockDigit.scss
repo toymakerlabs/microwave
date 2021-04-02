@@ -1,0 +1,32 @@
+@import "styles/variables";
+
+.clock-digit {
+  padding: 0.25rem;
+
+  input[type="number"] {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font-family: $default-font;
+    -webkit-appearance: none;
+    text-align: center;
+    outline-color: $ui-dark;
+    border-radius: 0.25rem;
+    max-width: 6.75rem;
+
+    &:active,
+    &:focus {
+      color: $accent-color;
+      background-color: $ui-dark;
+    }
+    &:disabled {
+      -webkit-text-fill-color: $accent-color;
+      color: $accent-color;
+      opacity: 1;
+    }
+    &::selection {
+      background: rgba(0, 0, 255, 0.1);
+    }
+  }
+}

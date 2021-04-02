@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "sourceMap": true,
+    "jsx": "react",
+    "module": "commonjs",
+    "allowSyntheticDefaultImports":true,
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "outDir": "./dist/",
+    "baseUrl": "src",
+    "paths":{
+        "lib": ["src/lib"],
+        "styles": ["src/styles"],
+        "components": ["src/components"],
+    },
+    "preserveConstEnums": true,
+    "removeComments": true,
+    "target": "es6"
+  },
+  "include": [
+    "src"
+  ]
+}

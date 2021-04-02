@@ -1,0 +1,51 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.main-controls {
+  flex: 0 1 36px;
+
+  > div {
+    display: flex;
+    height: 100%;
+
+    button {
+      flex: 1;
+      padding: 0;
+      margin-right: $spacing;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media screen and (orientation: portrait) and (min-width: 200px) {
+  .main-controls {
+    flex: 0 1 42px;
+  }
+}
+
+@media screen and (orientation: portrait) and (min-width: 275px) {
+  .main-controls {
+    flex: 0 1 72px;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 400px) {
+  .main-controls {
+    flex: 0 1 36px;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 440px) {
+  .main-controls {
+    flex: 0 1 42px;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 560px) {
+  .main-controls {
+    flex: 0 1 72px;
+  }
+}

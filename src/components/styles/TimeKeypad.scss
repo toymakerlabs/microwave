@@ -1,0 +1,91 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.keypad {
+  @include unselectable;
+  flex: 1;
+  padding: $spacing * 2 0;
+
+  .keys {
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(6, 1fr);
+    row-gap: $spacing;
+    column-gap: $spacing;
+
+    .keypad-digit {
+      grid-column: span 2;
+
+      &:last-child:nth-child(3n - 2) {
+        grid-column-end: 5;
+      }
+    }
+  }
+}
+
+@media screen and (min-height: 480px) {
+  .keypad {
+    flex: 2;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 400px) {
+  .keypad {
+    flex: 0 1 42px;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 440px) {
+  .keypad {
+    flex: 0 1 42px;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 566px) {
+  .keypad {
+    flex: 1 1 72px;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-height: 400px) {
+  .keypad {
+    display: flex;
+    flex-direction: column;
+    padding: $spacing 0;
+    flex: 0 1 72px;
+
+    .keys {
+      display: flex;
+      column-gap: 0;
+
+      .keypad-digit {
+        flex: 1;
+        margin-right: $spacing;
+
+        &:last-child {
+          flex: 1;
+          order: -1;
+          margin-right: $spacing;
+        }
+
+        &:nth-last-child(2) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-height: 480px) {
+  .keypad {
+    flex: 2;
+
+    .keys {
+      .keypad-digit {
+        &:last-child {
+          grid-column: span 2;
+        }
+      }
+    }
+  }
+}
